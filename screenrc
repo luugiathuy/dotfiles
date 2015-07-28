@@ -1,0 +1,23 @@
+hardstatus alwayslastline "%{= KW}%-w%{= ck}%50>%n %t%{-}%+w%<%-22=%{w}%c [%l]"
+
+nonblock 5
+
+# Disable the startup message
+startup_message off
+
+# detach the screen if we get disconnected
+autodetach on
+
+# Show messages at the bottom for only 0.5s
+msgwait 0.5
+
+# Always start `screen` with UTF-8 enabled (`screen -U`)
+defutf8 on
+
+shell -${SHELL}
+
+# Show the currently-running program
+shelltitle '$ |bash'
+
+# Set a large scrollback buffer
+defscrollback 32000

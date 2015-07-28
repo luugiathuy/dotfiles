@@ -1,0 +1,15 @@
+# Handle the fact that this file will be used with multiple OSs
+platform=`uname`
+if [[ $platform == 'Linux' ]]; then
+  alias a='ls -lrth --color'
+elif [[ $platform == 'Darwin' ]]; then
+  alias a='ls -lrthG'
+fi
+
+alias u='cd ..'
+alias code='cd ~/Documents/workspace/'
+alias gd='git diff'
+alias gp='git push'
+alias gpr='git pull --rebase'
+alias gs='git status'
+alias killruby='killall -9 ruby'
