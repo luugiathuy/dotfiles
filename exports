@@ -24,4 +24,6 @@ export GREP_OPTIONS='--color=auto';
 
 export GOPATH=$HOME/Documents/workspace/go
 
-export PATH=$PATH:bin:~/bin:$GOPATH/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin
+export CARGOPATH=$HOME/.cargo
+
+export PATH=$PATH:bin:~/bin:$GOPATH/bin:$CARGOPATH/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin
