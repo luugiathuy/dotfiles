@@ -4,7 +4,7 @@ desc "install the dot files into user's home directory"
 task :default do
 	replace_all = false
 	Dir['*'].each do |file|
-		next if %w[.gitignore .gitmodules LICENSE Rakefile README.md vim-config].include? file
+		next if %w[.gitignore .gitmodules LICENSE Rakefile README.md vim-config fonts].include? file
 
 		if File.exist?(File.join(ENV['HOME'], ".#{file}"))
 			if replace_all
