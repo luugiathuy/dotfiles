@@ -1,6 +1,7 @@
 [user]
 	name = Luu Gia Thuy
 	email = luugiathuy@gmail.com
+	signingkey = EC8336D94FE26EA0
 [alias]
 	co = checkout
 	cleanup = !git remote prune origin && git gc && git clean -df && git stash clear

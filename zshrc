@@ -26,3 +26,5 @@ stty stop undef
 setopt AUTO_CD
 
 setopt EXTENDED_GLOB
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
