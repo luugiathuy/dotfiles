@@ -34,3 +34,7 @@
 	user = luugiathuy
 [merge]
 	ff = only
+[url "git@bitbucket.org:"]
+  insteadOf = https://bitbucket.org/
+[diff]
+	tool = meld
