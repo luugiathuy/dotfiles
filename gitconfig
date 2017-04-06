@@ -2,9 +2,12 @@
 	name = Luu Gia Thuy
 	email = luugiathuy@gmail.com
 	signingkey = EC8336D94FE26EA0
+
 [alias]
 	co = checkout
 	cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
 [color]
 	diff = auto
 	status = auto
@@ -16,25 +19,49 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim --noplugin
+
 [apply]
 	whitespace = nowarn
 
-[alias]
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [help]
 	autocorrect = 1
+
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
+
 [push]
 	default = current
+
 [rerere]
 	enabled = 1
+
 [github]
 	user = luugiathuy
+
 [merge]
 	ff = only
+	# I pretty much never mean to do a real merge, since I use a rebase workflow.
+	# Note: this global option applies to all merges, including those done during a git pull
+	# https://git-scm.com/docs/git-config#git-config-mergeff
+
+	conflictstyle = diff3
+	# Standard diff is two sets of final changes. This introduces the original text before each side's changes.
+	# https://git-scm.com/docs/git-config#git-config-mergeconflictStyle
+
+[commit]
+	gpgSign = true
+	# "other people can trust that the changes you've made really were made by you"
+	# https://help.github.com/articles/about-gpg/
+	# https://git-scm.com/docs/git-config#git-config-commitgpgSign
+
+[status]
+	showUntrackedFiles = all
+	# Sometimes a newly-added folder, since it's only one line in git status, can slip under the radar.
+	# https://git-scm.com/docs/git-config#git-config-statusshowUntrackedFiles
+
 [url "git@bitbucket.org:"]
-  insteadOf = https://bitbucket.org/
+	insteadOf = https://bitbucket.org/
+
 [diff]
 	tool = meld
