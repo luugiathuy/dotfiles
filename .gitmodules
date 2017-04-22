@@ -1,9 +1,6 @@
 [submodule "zprezto"]
 	path = zprezto
 	url = git@github.com:luugiathuy/prezto.git
-[submodule "vim-config"]
-	path = vim-config
-	url = git@github.com:luugiathuy/vim-config.git
 [submodule "fonts"]
 	path = fonts
 	url = git@github.com:powerline/fonts.git

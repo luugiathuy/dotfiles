@@ -27,8 +27,6 @@
 
 - Go to `~/.dotfiles/fonts` and run `./install.sh` to install Powerline fonts
 
-- Go to `~/.dotfiles/vimconfig` and follow https://github.com/luugiathuy/vim-config to set up vim
-
 ## Others
 
 ### Homebrew
