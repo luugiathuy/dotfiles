@@ -65,3 +65,5 @@
 
 [diff]
 	tool = meld
+[diff "sopsdiffer"]
+	textconv = sops -d
