@@ -58,7 +58,7 @@ Session.vim
 .sass-cache
 
 # Others
-log/
+# log/
 db/*.sqlite3
 .netrwhist
 project-notes.txt
