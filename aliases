@@ -8,7 +8,7 @@ fi
 
 alias u='cd ..'
 alias code='cd ~/Documents/workspace/'
-alias gocode='cd ~/Documents/workspace/go/src/'
+alias gosrc='cd ~/Documents/workspace/go/src/'
 alias gd='git diff'
 alias gp='git push'
 alias gpr='git pull --rebase'
