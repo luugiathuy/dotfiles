@@ -7,7 +7,7 @@ elif [[ $platform == 'Darwin' ]]; then
 fi
 
 alias u='cd ..'
-alias code='cd ~/Documents/workspace/'
+alias src='cd ~/Documents/workspace/'
 alias gosrc='cd ~/Documents/workspace/go/src/'
 alias gd='git diff'
 alias gp='git push'
