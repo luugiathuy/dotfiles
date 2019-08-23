@@ -27,6 +27,10 @@ setopt AUTO_CD
 
 setopt EXTENDED_GLOB
 
+# zsh-autosuggestions accept suggest
+bindkey '^O' forward-word
+bindkey '^ ' autosuggest-accept
+
 # Add RVM and elixir's escripts to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/.mix/escripts"
 
