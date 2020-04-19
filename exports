@@ -26,4 +26,6 @@ export GOPATH=$HOME/Documents/workspace/go
 
 export CARGOPATH=$HOME/.cargo
 
-export PATH=$PATH:bin:~/bin:$GOPATH/bin:$CARGOPATH/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin
+export POSTGRESQL_PATH=/Applications/Postgres.app/Contents/Versions/11
+
+export PATH=$PATH:bin:~/bin:$GOPATH/bin:$CARGOPATH/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin:$POSTGRESQL_PATH/bin:$HOME/.mix/escripts

@@ -1,6 +1,6 @@
 [submodule "zprezto"]
 	path = zprezto
-	url = git@github.com:luugiathuy/prezto.git
+	url = git@github.com:sorin-ionescu/prezto.git
 [submodule "fonts"]
 	path = fonts
 	url = git@github.com:powerline/fonts.git

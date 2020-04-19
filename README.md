@@ -4,22 +4,22 @@
 
 - Clone the repo to home directory
 
-    ```
+    ```shell
     git clone git@github.com:luugiathuy/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     ```
 
 - Clone and update submodules
 
-    ```
+    ```shell
     git submodule update --init --recursive
-    ```
+   ```
 
-- Follow instruction in https://github.com/luugiathuy/prezto to install `zprezto`
+- Follow instruction in https://github.com/sorin-ionescu/prezto to install `zprezto`
 
 - In `~/.dotfiles` folder, run
 
-    ```
+    ```shell
     rake
     ```
 
@@ -31,7 +31,7 @@
 
 ### Homebrew
 
-```
+```shell
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 

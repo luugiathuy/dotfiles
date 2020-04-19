@@ -31,8 +31,5 @@ setopt EXTENDED_GLOB
 bindkey '^O' forward-word
 bindkey '^ ' autosuggest-accept
 
-# Add RVM and elixir's escripts to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin:$HOME/.mix/escripts"
-
 # Zsh auto suggestions https://github.com/zsh-users/zsh-autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
