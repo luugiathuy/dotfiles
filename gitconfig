@@ -1,7 +1,7 @@
 [user]
 	name = Luu Gia Thuy
 	email = luugiathuy@gmail.com
-	signingkey = EC8336D94FE26EA0
+	signingkey = A5C50441BBE4D674
 
 [alias]
 	co = checkout
@@ -72,3 +72,4 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+	
