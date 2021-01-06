@@ -31,6 +31,8 @@ setopt EXTENDED_GLOB
 bindkey '^O' forward-word
 bindkey '^ ' autosuggest-accept
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=247"
+
 # Zsh auto suggestions https://github.com/zsh-users/zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
