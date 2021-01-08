@@ -23,6 +23,8 @@ export GOPATH=$HOME/Documents/workspace/go
 
 export CARGOPATH=$HOME/.cargo
 
+export COCKROACH_SKIP_ENABLING_DIAGNOSTIC_REPORTING=true
+
 export POSTGRESQL_PATH=/Applications/Postgres.app/Contents/Versions/11
 
-export PATH=$PATH:bin:~/bin:$GOPATH/bin:$CARGOPATH/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin:$POSTGRESQL_PATH/bin:$HOME/.mix/escripts
+export PATH=$PATH:bin:~/bin:$GOPATH/bin:$CARGOPATH/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin:$POSTGRESQL_PATH/bin:$HOME/.mix/escripts:/opt/postgres/bin

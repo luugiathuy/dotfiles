@@ -26,3 +26,12 @@ alias egrep="egrep --color=auto"
 
 # k8s
 alias k='kubectl'
+
+# RabbitMQ start server
+alias rabbit='/opt/rabbit/sbin/rabbitmq-server'
+
+# PostgreSQL
+alias psqldb='postgres -D /opt/postgres/data/'
+
+# CockroachDB
+alias crdb='/opt/cockroach/cockroach start-single-node --logtostderr=ERROR --insecure --listen-addr=localhost --store=type=mem,size=3GiB'
