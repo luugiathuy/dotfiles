@@ -63,6 +63,9 @@
 [url "git@bitbucket.org:"]
 	insteadOf = https://bitbucket.org/
 
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
+
 [diff]
 	tool = meld
 [diff "sopsdiffer"]

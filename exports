@@ -25,6 +25,10 @@ export CARGOPATH=$HOME/.cargo
 
 export COCKROACH_SKIP_ENABLING_DIAGNOSTIC_REPORTING=true
 
-export POSTGRESQL_PATH=/Applications/Postgres.app/Contents/Versions/11
+export POSTGRESQL_PATH=/opt/postgres/
 
-export PATH=$PATH:bin:~/bin:$GOPATH/bin:$CARGOPATH/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin:$POSTGRESQL_PATH/bin:$HOME/.mix/escripts:/opt/postgres/bin
+export NPM_PACKAGES=$HOME/.npm-packages
+
+export NODE_PATH=$NODE_PATH:$NPM_PACKAGES/lib/node_modules
+
+export PATH=$HOME/.rbenv/bin:$PATH:bin:~/bin:$GOPATH/bin:$CARGOPATH/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:$POSTGRESQL_PATH/bin:$HOME/.mix/escripts:$NPM_PACKAGES/bin
