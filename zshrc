@@ -41,3 +41,5 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 fi
 
 eval "$(rbenv init -)"
+
+eval "$(direnv hook zsh)"
