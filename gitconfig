@@ -1,7 +1,7 @@
 [user]
 	name = Luu Gia Thuy
 	email = luugiathuy@gmail.com
-	signingkey = A5C50441BBE4D674
+	signingkey = EC8336D94FE26EA0
 
 [alias]
 	co = checkout
@@ -76,3 +76,5 @@
 	process = git-lfs filter-process
 	required = true
 	
+[gpg]
+	program = gpg
