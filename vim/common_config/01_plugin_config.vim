@@ -5,6 +5,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
   NeoBundleFetch 'Shougo/neobundle.vim'
 
+" Dracula theme
+  NeoBundle 'dracula/vim'
+
 " Plugins requiring no additional configuration or keymaps
   NeoBundle "tpope/vim-endwise"
   NeoBundle "tpope/vim-fugitive"

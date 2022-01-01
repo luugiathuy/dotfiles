@@ -1,0 +1,10 @@
+if [[ -e "${HOME}/.localrc" ]]; then
+  source "${HOME}/.localrc"
+fi
+
+# fcitx5 input method
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+fcitx5 &

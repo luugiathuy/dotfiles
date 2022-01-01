@@ -1,6 +1,6 @@
 " set color scheme
   set background=dark
-  colorscheme onedark
+  colorscheme dracula
 
 " required for several plugins
   set nocompatible

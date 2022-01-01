@@ -36,6 +36,11 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=247"
 # Zsh auto suggestions https://github.com/zsh-users/zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Import colorscheme from 'wal'
+source "${HOME}/.cache/wal/colors.sh"
+source ~/.cache/wal/colors-tty.sh
+cat ~/.cache/wal/sequences
+
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
   tmux ls && read tmux_session && tmux attach -t ${tmux_session:-default} || tmux new -s ${tmux_session:-default}
 fi
