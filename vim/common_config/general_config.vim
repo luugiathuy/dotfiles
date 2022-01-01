@@ -1,6 +1,6 @@
-" set solarized color scheme
-  set background=light
-  colorscheme solarized
+" set color scheme
+  set background=dark
+  colorscheme onedark
 
 " required for several plugins
   set nocompatible

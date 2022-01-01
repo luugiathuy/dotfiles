@@ -14,6 +14,7 @@ alias gp='git push'
 alias gpr='git pull --rebase'
 alias gs='git status'
 alias killruby='killall -9 ruby'
+alias nf='neofetch'
 
 # Move export GREP_OPTIONS="--color=auto" (which is deprecated) from .exports to .alias
 # Always enable colored `grep` output`
@@ -21,8 +22,8 @@ alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 
-# Only for Mac
-# alias vim='/usr/local/bin/vim' 
+# Using nvim for vim
+alias vim='nvim'
 
 # k8s
 alias k='kubectl'
