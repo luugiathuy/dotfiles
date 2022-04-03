@@ -26,15 +26,15 @@ set $mod Mod4
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 8
 
+# Polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
 # Wal
-exec_always --no-startup-id wal -R -n
-
-# Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+# exec_always --no-startup-id wal -R -n
 
 # Conky
 exec --no-startup-id conky
@@ -52,6 +52,9 @@ exec --no-startup-id nm-applet
 
 # Start KeePassXC
 exec --no-startup-id keepassxc
+
+# Start Dropbox
+exec --no-startup-id dropbox
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status

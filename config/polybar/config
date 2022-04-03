@@ -56,7 +56,7 @@ foreground = ${colors.white}
 
 modules-left = rofimenu right-angle i3
 modules-center = xwindow
-modules-right = cpu separator memory separator crypto separator pulseaudio separator date separator powermenu
+modules-right = cpu separator memory separator pulseaudio separator date separator powermenu
 
 tray-position = right
 override-redirect = true
