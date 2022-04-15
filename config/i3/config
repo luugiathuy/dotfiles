@@ -33,6 +33,9 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+# Set wallpaper
+exec --no-startup-id feh --randomize --bg-center ~/Pictures/wallpapers/*
+
 # Wal
 # exec_always --no-startup-id wal -R -n
 

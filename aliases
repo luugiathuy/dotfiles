@@ -1,12 +1,12 @@
 # Handle the fact that this file will be used with multiple OSs
 platform=`uname`
-if [[ $platform == 'Linux' ]]; then
-  alias a='ls -lrth --color'
-elif [[ $platform == 'Darwin' ]]; then
-  alias a='ls -lrthG'
-fi
 
 alias u='cd ..'
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 alias src='cd ~/Documents/workspace/'
 alias gosrc='cd ~/Documents/workspace/go/src/'
 alias gd='git diff'
