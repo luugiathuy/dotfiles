@@ -27,7 +27,7 @@ set $mod Mod4
 font pango:DejaVu Sans Mono 8
 
 # Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh --forest
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -152,15 +152,19 @@ bindsym $mod+p exec --no-startup-id flameshot gui
 bindsym $mod+Shift+p exec --no-startup-id flameshot gui -d 2000
 bindsym $mod+Ctrl+Shift+p exec --no-startup-id flameshot full -c -p $HOME/Downloads
 
+# move between monitors
+bindsym $mod+o move workspace to output right
+bindsym $mod+i move workspace to output left
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:"
-set $ws2 "2:"
-set $ws3 "3:"
-set $ws4 "4:"
-set $ws5 "5:"
-set $ws6 "6:"
-set $ws7 "7:"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"

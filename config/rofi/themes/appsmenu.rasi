@@ -86,14 +86,14 @@ element-text {
 }
 
 element selected {
-	background-color: @background;
+	/* background-color: @background; */
 	border: 1px;
 	border-radius: 0.5em;
 }
 
 /* Element normal */
 element normal.normal, element alternate.normal {
-	background-color: @background;
+	/* background-color: @background; */
 	text-color: @foreground;
 }
 element selected.normal {
@@ -103,20 +103,20 @@ element selected.normal {
 
 /* Element active */
 element normal.active, element alternate.active {
-	text-color: @secondary;
+	text-color: @foreground;
 }
 element selected.active {
-	border-color: @secondary;
-	text-color: @secondary;
+	border-color: @foreground;
+	text-color: @foreground;
 }
 
 /* Element urgent */
 element normal.urgent, element alternate.urgent {
-	text-color: @urgency;
+	text-color: @foreground;
 }
 element selected.urgent {
-	border-color: @urgency;
-	text-color: @urgency;
+	border-color: @foreground;
+	text-color: @foreground;
 }
 
 wrapper-prompt {
@@ -141,7 +141,7 @@ button {
 
 button selected {
 	border: 0 0 1px 0;
-	border-color: @primary;
+	border-color: @foreground;
 }
 
 prompt {

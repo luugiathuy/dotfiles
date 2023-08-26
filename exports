@@ -1,5 +1,5 @@
 # Make vim the default editor.
-export EDITOR='vim';
+export EDITOR='nvim';
 
 # Enable persistent REPL history for `node`.
 NODE_REPL_HISTORY_FILE=~/.node_history;
@@ -33,4 +33,4 @@ export NODE_PATH=$NODE_PATH:$NPM_PACKAGES/lib/node_modules
 
 export GPG_TTY=$(tty)
 
-export PATH=$HOME/.rbenv/bin:$PATH:bin:~/bin:$GOPATH/bin:$CARGOPATH/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:$POSTGRESQL_PATH/bin:$HOME/.mix/escripts:$NPM_PACKAGES/bin
+export PATH=$HOME/.rbenv/bin:$PATH:bin:~/bin:$GOPATH/bin:$CARGOPATH/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:$POSTGRESQL_PATH/bin:$HOME/.mix/escripts:$NPM_PACKAGES/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin
