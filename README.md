@@ -20,7 +20,7 @@
 - In `~/.dotfiles` folder, run
 
     ```shell
-    rake
+    make all
     ```
 
     to create symlinks in home directory
