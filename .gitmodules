@@ -1,4 +1,4 @@
-[submodule "zprezto"]
+[submodule "zprezto/.zprezto"]
 	path = zprezto
 	url = git@github.com:sorin-ionescu/prezto.git
 [submodule "fonts"]

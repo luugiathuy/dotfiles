@@ -1,9 +1,0 @@
-[general]
-base_currency = USD
-display = price
-
-[bitcoin]
-icon = %%{F#8ee8c4}ﴑ%%{F-}
-
-[ethereum]
-icon = %%{F#8ee8c4}ﲹ%%{F-}
