@@ -25,7 +25,7 @@
 
     to create symlinks in home directory
 
-- Go to `~/.dotfiles/fonts` and run `./install.sh` to install Powerline fonts
+- Install Powerline font https://github.com/powerline/fonts
 
 ## Others
 
