@@ -18,7 +18,7 @@
 - Follow instruction in https://github.com/sorin-ionescu/prezto to install `zprezto`
 
 - Install `stow` https://www.gnu.org/software/stow
-    
+
     ```shell
     # macOS
     brew install stow
@@ -56,7 +56,7 @@
     # Install plugins in tmux with <prefix> + I
     ```
 
-- Install `neofetch` 
+- Install `neofetch`
 
     ```shell
     # macOS
@@ -76,13 +76,17 @@
     pacman -S neovim
     ```
 
-## Arch Linux
-
-- Install `pywal` https://github.com/dylanaraps/pywal
+- Install `ctags` https://github.com/universal-ctags/ctags
 
     ```shell
-    pip3 install pywal
+    # macOS
+    brew install ctags-exuberant
+
+    # Arch Linux
+    pacman -S ctags
     ```
+
+## Arch Linux
 
 ## macOS
 
@@ -103,9 +107,9 @@
     brew install rbenv ruby-build
 
     # Arch Linux
-    yay -S rbenv 
+    yay -S rbenv
     ```
-    
+
     ```shell
     rbenv init
     ```
@@ -119,8 +123,3 @@ Install `rustfmt` for RustFmt command of [rust.vim](https://github.com/rust-lang
 cargo install rustfmt
 ```
 
-### Ctags
-
-```
-brew install ctags-exuberant
-```
