@@ -9,27 +9,23 @@
     cd ~/.dotfiles
     ```
 
-- Clone and update submodules
-
-    ```shell
-    git submodule update --init --recursive
-    ```
-
-- Follow instruction in https://github.com/sorin-ionescu/prezto to install `zprezto`
+- Follow instruction in https://github.com/sorin-ionescu/prezto to install `zprezto` (no need to create link to ZSH configuration files)
 
 - Install `stow` https://www.gnu.org/software/stow
 
-    ```shell
-    # macOS
+    macOS
+    ```console
     brew install stow
-
-    # Arch Linux
+    ```
+    
+    Arch Linux
+    ```console
     pacman -S stow
     ```
 
 - In `~/.dotfiles` folder, run
 
-    ```shell
+    ```console
     make all
     ```
 
@@ -54,6 +50,12 @@
     git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
     # Install plugins in tmux with <prefix> + I
+    ```
+
+- Install zsh-autosuggestions https://github.com/zsh-users/zsh-autosuggestions
+
+    ```console
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
     ```
 
 - Install `neofetch`
