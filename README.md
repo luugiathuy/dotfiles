@@ -13,19 +13,29 @@
 
     ```shell
     git submodule update --init --recursive
-   ```
+    ```
 
 - Follow instruction in https://github.com/sorin-ionescu/prezto to install `zprezto`
+
+- Install `stow` https://www.gnu.org/software/stow
+    
+    ```shell
+    # Mac OSX
+    brew install stow
+
+    # Arch Linux
+    sudo pacman -S stow
+    ```
 
 - In `~/.dotfiles` folder, run
 
     ```shell
-    rake
+    make all
     ```
 
     to create symlinks in home directory
 
-- Go to `~/.dotfiles/fonts` and run `./install.sh` to install Powerline fonts
+- Install Powerline font https://github.com/powerline/fonts
 
 ## Others
 
@@ -39,10 +49,10 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 - Install tmux
 
-```
-brew install tmux
-brew install reattach-to-user-namespace
-```
+    ```shell
+    brew install tmux
+    brew install reattach-to-user-namespace
+    ```
 
 - Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
