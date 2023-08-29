@@ -1,35 +1,31 @@
 # dotfiles
 
-## Install
+## Installation
 
 - Clone the repo to home directory
 
-    ```shell
+    ```console
     git clone git@github.com:luugiathuy/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     ```
 
-- Clone and update submodules
-
-    ```shell
-    git submodule update --init --recursive
-    ```
-
-- Follow instruction in https://github.com/sorin-ionescu/prezto to install `zprezto`
+- Follow instruction in https://github.com/sorin-ionescu/prezto to install `zprezto` (no need to create link to ZSH configuration files)
 
 - Install `stow` https://www.gnu.org/software/stow
-    
-    ```shell
-    # Mac OSX
-    brew install stow
 
-    # Arch Linux
-    sudo pacman -S stow
+    macOS
+    ```console
+    brew install stow
+    ```
+
+    Arch Linux
+    ```console
+    pacman -S stow
     ```
 
 - In `~/.dotfiles` folder, run
 
-    ```shell
+    ```console
     make all
     ```
 
@@ -37,49 +33,106 @@
 
 - Install Powerline font https://github.com/powerline/fonts
 
-## Others
-
-### Homebrew
-
-```shell
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-### Tmux
-
 - Install tmux
 
-    ```shell
+    macOS
+    ```console
     brew install tmux
     brew install reattach-to-user-namespace
     ```
 
+    Arch Linux
+    ```console
+    pacman -S tmux
+    ```
+
 - Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
-### RVM
+    ```console
+    git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+    ```
+    Install plugins in tmux with `<prefix> + I`
 
-```
-curl -L get.rvm.io | bash -s stable
-source ~/.rvm/scripts/rvm
-rvm requirements
-```
+- Install zsh-autosuggestions https://github.com/zsh-users/zsh-autosuggestions
 
-### Link Sublime (Mac OSX)
+    ```console
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+    ```
 
-```
-ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-```
+- Install `neofetch`
 
-### Ctags
+    macOS
+    ```console
+    brew install neofetch
+    ```
 
-```
-brew install ctags-exuberant
-```
+    Arch Linux
+    ```console
+    pacman -S neofetch
+    ```
+
+- Install `neovim` https://github.com/neovim/neovim/wiki/Installing-Neovim
+
+    macOS
+
+    ```console
+    brew install neovim
+    ```
+
+    Arch Linux
+    ```console
+    pacman -S neovim
+    ```
+
+- Install `ctags` https://github.com/universal-ctags/ctags
+
+    macOS
+    ```console
+    brew install ctags-exuberant
+    ```
+
+    Arch Linux
+    ```console
+    pacman -S ctags
+    ```
+
+## Arch Linux
+
+## macOS
+
+- Install Homebrew https://brew.sh
+
+    ```console
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+
+## Languages
+
+### Ruby
+
+- Install `rbenv` https://github.com/rbenv/rbenv
+
+    macOS
+    ```console
+    brew install rbenv ruby-build
+    ```
+
+    Arch Linux
+    ```console
+    yay -S rbenv
+    ```
+    
+    After install:
+    ```console
+    rbenv init
+    ```
 
 ### Rust
 
 Install `rustfmt` for RustFmt command of [rust.vim](https://github.com/rust-lang/rust.vim)
 
-```
+
+```console
 cargo install rustfmt
 ```
+
