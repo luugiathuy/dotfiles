@@ -4,7 +4,7 @@
 
 - Clone the repo to home directory
 
-    ```shell
+    ```console
     git clone git@github.com:luugiathuy/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     ```
@@ -17,7 +17,7 @@
     ```console
     brew install stow
     ```
-    
+
     Arch Linux
     ```console
     pacman -S stow
@@ -35,22 +35,23 @@
 
 - Install tmux
 
-    ```shell
-    # macOS
+    macOS
+    ```console
     brew install tmux
     brew install reattach-to-user-namespace
+    ```
 
-    # Arch Linux
+    Arch Linux
+    ```console
     pacman -S tmux
     ```
 
 - Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
-    ```shell
+    ```console
     git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
-
-    # Install plugins in tmux with <prefix> + I
     ```
+    Install plugins in tmux with `<prefix> + I`
 
 - Install zsh-autosuggestions https://github.com/zsh-users/zsh-autosuggestions
 
@@ -60,31 +61,38 @@
 
 - Install `neofetch`
 
-    ```shell
-    # macOS
+    macOS
+    ```console
     brew install neofetch
+    ```
 
-    # Arch Linux
+    Arch Linux
+    ```console
     pacman -S neofetch
     ```
 
 - Install `neovim` https://github.com/neovim/neovim/wiki/Installing-Neovim
 
-    ```shell
-    # macOS
-    brew install neovim
+    macOS
 
-    # Arch Linux
+    ```console
+    brew install neovim
+    ```
+
+    Arch Linux
+    ```console
     pacman -S neovim
     ```
 
 - Install `ctags` https://github.com/universal-ctags/ctags
 
-    ```shell
-    # macOS
+    macOS
+    ```console
     brew install ctags-exuberant
+    ```
 
-    # Arch Linux
+    Arch Linux
+    ```console
     pacman -S ctags
     ```
 
@@ -94,7 +102,7 @@
 
 - Install Homebrew https://brew.sh
 
-    ```shell
+    ```console
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
 
@@ -104,15 +112,18 @@
 
 - Install `rbenv` https://github.com/rbenv/rbenv
 
-    ```shell
-    # macOS
+    macOS
+    ```console
     brew install rbenv ruby-build
-
-    # Arch Linux
-    yay -S rbenv
     ```
 
-    ```shell
+    Arch Linux
+    ```console
+    yay -S rbenv
+    ```
+    
+    After install:
+    ```console
     rbenv init
     ```
 
@@ -121,7 +132,7 @@
 Install `rustfmt` for RustFmt command of [rust.vim](https://github.com/rust-lang/rust.vim)
 
 
-```shell
+```console
 cargo install rustfmt
 ```
 
