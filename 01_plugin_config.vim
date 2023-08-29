@@ -5,23 +5,15 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
   NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Dracula theme
-  NeoBundle 'dracula/vim'
-
 " Plugins requiring no additional configuration or keymaps
-  NeoBundle "tpope/vim-endwise"
-  NeoBundle "tpope/vim-fugitive"
   NeoBundle "tpope/vim-git"
   NeoBundle "tpope/vim-haml"
   NeoBundle "tpope/vim-rake"
   NeoBundle "tpope/vim-repeat"
   NeoBundle "tpope/vim-abolish"
   NeoBundle "tpope/vim-cucumber"
-  NeoBundle "tpope/vim-endwise"
-  NeoBundle "christoomey/vim-tmux-navigator"
 
 " Nice class view
-  NeoBundle "majutsushi/tagbar"
   NeoBundle "mattn/webapi-vim"
   NeoBundle "mattn/gist-vim"
   NeoBundle "michaeljsmith/vim-indent-object"

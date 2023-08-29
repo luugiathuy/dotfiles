@@ -37,11 +37,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=247"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-  [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-    source "$BASE16_SHELL/profile_helper.sh"
-base16_dracula
+source ~/.base16_theme
 
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
   tmux ls && read tmux_session && tmux attach -t ${tmux_session:-default} || tmux new -s ${tmux_session:-default}
