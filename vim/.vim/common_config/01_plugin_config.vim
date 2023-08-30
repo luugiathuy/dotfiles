@@ -24,7 +24,6 @@ nnoremap <silent> <C-f> :GFiles<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
 nnoremap <silent> <Leader>/ :BLines<CR>
 nnoremap <silent> <Leader>' :Marks<CR>
-nnoremap <silent> <Leader>g :Commits<CR>
 nnoremap <silent> <Leader>hh :History<CR>
 nnoremap <silent> <Leader>h: :History:<CR>
 nnoremap <silent> <Leader>h/ :History/<CR>
@@ -65,6 +64,14 @@ let g:surround_61 = "<%= \r %>"
 " Highlight choices
 Plug 'easymotion/vim-easymotion'
 
+" Running tests
+Plug 'vim-test/vim-test'
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>v :TestVisit<CR>
+
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 au BufNewFile,BufRead *.go set filetype=go
@@ -75,7 +82,34 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 
+" Rails
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rails'
+map <Leader>oc :Rcontroller<Space>
+map <Leader>ov :Rview<Space>
+map <Leader>om :Rmodel<Space>
+map <Leader>oh :Rhelper<Space>
+map <Leader>oj :Rjavascript<Space>
+map <Leader>os :Rstylesheet<Space>
+map <Leader>oi :Rintegration<Space>
+" shortcuts for frequenly used files
+nmap gs :e db/schema.rb<cr>
+nmap gr :e config/routes.rb<cr>
+nmap gm :e Gemfile<cr>
+
 " Elixir
 Plug 'elixir-editors/vim-elixir'
+
+" LSP for NeoVim
+if has('nvim')
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-cmdline'
+  Plug 'hrsh7th/nvim-cmp'
+endif
 
 call plug#end()
