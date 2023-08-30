@@ -22,7 +22,7 @@ env:
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
   WINIT_X11_SCALE_FACTOR: "1.0"
-  TERM: alacritty
+  TERM: alacritty-direct
 
 #window:
   # Window dimensions (changes require restart)

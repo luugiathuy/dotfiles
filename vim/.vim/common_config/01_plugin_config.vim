@@ -102,14 +102,9 @@ nmap gm :e Gemfile<cr>
 " Elixir
 Plug 'elixir-editors/vim-elixir'
 
-" LSP for NeoVim
-if has('nvim')
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'hrsh7th/cmp-nvim-lsp'
-  Plug 'hrsh7th/cmp-buffer'
-  Plug 'hrsh7th/cmp-path'
-  Plug 'hrsh7th/cmp-cmdline'
-  Plug 'hrsh7th/nvim-cmp'
-endif
+" Language Server Protocol support
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+let g:lsp_settings_filetype_ruby = 'solargraph'
 
 call plug#end()
