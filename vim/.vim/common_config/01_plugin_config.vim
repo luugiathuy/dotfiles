@@ -94,10 +94,6 @@ map <Leader>oh :Rhelper<Space>
 map <Leader>oj :Rjavascript<Space>
 map <Leader>os :Rstylesheet<Space>
 map <Leader>oi :Rintegration<Space>
-" shortcuts for frequenly used files
-nmap gs :e db/schema.rb<cr>
-nmap gr :e config/routes.rb<cr>
-nmap gm :e Gemfile<cr>
 
 " Elixir
 Plug 'elixir-editors/vim-elixir'
