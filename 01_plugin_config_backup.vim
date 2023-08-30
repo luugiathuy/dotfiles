@@ -9,7 +9,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle "tpope/vim-git"
   NeoBundle "tpope/vim-haml"
   NeoBundle "tpope/vim-rake"
-  NeoBundle "tpope/vim-repeat"
   NeoBundle "tpope/vim-abolish"
   NeoBundle "tpope/vim-cucumber"
 
@@ -31,26 +30,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Nice lookups and competion
   NeoBundle "davidhalter/jedi-vim"
-
-" Vim airline configs
-  NeoBundle "bling/vim-airline"
-  let g:airline_powerline_fonts = 1
-  let g:airline_mode_map = {
-      \ '__' : '-',
-      \ 'n'  : 'N',
-      \ 'i'  : 'I',
-      \ 'R'  : 'R',
-      \ 'c'  : 'C',
-      \ 'v'  : 'V',
-      \ 'V'  : 'V',
-      \ '' : 'V',
-      \ 's'  : 'S',
-      \ 'S'  : 'S',
-      \ '' : 'S',
-      \ }
-
-" Easy motion config
-  NeoBundle "Lokaltog/vim-easymotion"
 
 " Supertab code completion
   NeoBundle "ervandew/supertab"
@@ -124,12 +103,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
     nmap gl :cwindow<CR>
 
 
-" Tagbar for navigation by tags using CTags
-  NeoBundle "majutsushi/tagbar"
-    let g:tagbar_autofocus = 1
-    map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-    map <Leader>. :TagbarToggle<CR>
-
 " Markdown syntax highlighting
   NeoBundle "tpope/vim-markdown"
   NeoBundle "maba/vim-markdown-preview"
@@ -138,13 +111,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
       autocmd BufNewFile,BufRead *.md       set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
       autocmd BufNewFile,BufRead *.markdown set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
     augroup END
-
-" NERDTree for project drawer
-  NeoBundle "scrooloose/nerdtree"
-    let NERDTreeHijackNetrw = 0
-    nmap <leader>g :NERDTreeToggle<CR>
-    nmap <leader>G :NERDTreeFind<CR>
-
 
 " Tabular for aligning text
   NeoBundle "godlygeek/tabular"
@@ -205,16 +171,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
     map <Leader>oj :Rjavascript<Space>
     map <Leader>os :Rstylesheet<Space>
     map <Leader>oi :Rintegration<Space>
-
-
-" surround for adding surround 'physics'
-  NeoBundle "tpope/vim-surround"
-    " # to surround with ruby string interpolation
-    let g:surround_35 = "#{\r}"
-    " - to surround with no-output erb tag
-    let g:surround_45 = "<% \r %>"
-    " = to surround with output erb tag
-    let g:surround_61 = "<%= \r %>"
 
 
 " Clojure Highlighting"

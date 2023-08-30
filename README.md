@@ -96,6 +96,18 @@
     pacman -S ctags
     ```
 
+- Install `ripgrep` https://github.com/BurntSushi/ripgrep
+
+    macOS
+    ```console
+    brew install ripgrep
+    ```
+
+    Arch Linux
+    ```console
+    pacman -S ripgrep
+    ```
+
 ## Arch Linux
 
 ## macOS
