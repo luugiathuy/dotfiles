@@ -96,6 +96,24 @@
     pacman -S ctags
     ```
 
+- Install `ripgrep` https://github.com/BurntSushi/ripgrep
+
+    macOS
+    ```console
+    brew install ripgrep
+    ```
+
+    Arch Linux
+    ```console
+    pacman -S ripgrep
+    ```
+
+- Install `deno` https://deno.com/
+
+    ```console
+    curl -fsSL https://deno.land/x/install/install.sh | sh
+    ```
+
 ## Arch Linux
 
 ## macOS
