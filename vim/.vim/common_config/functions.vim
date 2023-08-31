@@ -38,7 +38,7 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> [d <plug>(lsp-previous-diagnostic)
   nmap <buffer> ]d <plug>(lsp-next-diagnostic)
   nmap <buffer> K <plug>(lsp-hover)
-  nnoremap <buffer> <expr><c-w> lsp#scroll(+4)
+  nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
   nnoremap <buffer> <expr><c-b> lsp#scroll(-4)
 
   let g:lsp_format_sync_timeout = 1000

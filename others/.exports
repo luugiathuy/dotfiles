@@ -33,4 +33,6 @@ export NODE_PATH=$NODE_PATH:$NPM_PACKAGES/lib/node_modules
 
 export GPG_TTY=$(tty)
 
-export PATH=$HOME/.rbenv/bin:$PATH:bin:~/bin:$GOPATH/bin:$CARGOPATH/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:$POSTGRESQL_PATH/bin:$HOME/.mix/escripts:$NPM_PACKAGES/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin
+export DENO_INSTALL=$HOME/.deno
+
+export PATH=$HOME/.rbenv/bin:$PATH:bin:~/bin:$GOPATH/bin:$CARGOPATH/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:$POSTGRESQL_PATH/bin:$HOME/.mix/escripts:$NPM_PACKAGES/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$DENO_INSTALL/bin

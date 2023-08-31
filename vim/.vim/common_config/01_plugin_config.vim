@@ -20,7 +20,7 @@ Plug 'junegunn/fzf.vim'
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <C-p> :Files<CR>
-nnoremap <silent> <C-f> :GFiles<CR>
+nnoremap <silent> <C-g> :GFiles<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
 nnoremap <silent> <Leader>/ :BLines<CR>
 nnoremap <silent> <Leader>' :Marks<CR>
@@ -103,4 +103,36 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 let g:lsp_settings_filetype_ruby = 'solargraph'
 
+" Autocomplete
+Plug 'Shougo/ddc.vim'
+Plug 'vim-denops/denops.vim'
+Plug 'Shougo/ddc-ui-native'
+Plug 'Shougo/ddc-source-around'
+Plug 'shun/ddc-source-vim-lsp'
+Plug 'Shougo/ddc-matcher_head'
+Plug 'Shougo/ddc-sorter_rank'
+
 call plug#end()
+
+" ddc.vim
+call ddc#custom#patch_global('ui', 'native')
+call ddc#custom#patch_global('sources', ['vim-lsp', 'around'])
+call ddc#custom#patch_global('sourceOptions', #{
+      \   _: #{
+      \     matchers: ['matcher_head'],
+      \     sorters: ['sorter_rank']
+      \   },
+      \   vim-lsp: #{
+      \     matchers: ['matcher_head'],
+      \     mark: 'lsp',
+      \     forceCompletionPattern: '\.\w*|:\w*|->\w*',
+      \     maxItems: 10
+      \   },
+      \   around: #{
+      \     mark: 'around',
+      \     maxItems: 5,
+      \   },
+      \ })
+inoremap <expr> <C-Space> ddc#map#manual_complete()
+" Use ddc
+call ddc#enable()

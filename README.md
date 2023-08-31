@@ -108,6 +108,12 @@
     pacman -S ripgrep
     ```
 
+- Install `deno` https://deno.com/
+
+    ```console
+    curl -fsSL https://deno.land/x/install/install.sh | sh
+    ```
+
 ## Arch Linux
 
 ## macOS
