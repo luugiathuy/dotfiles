@@ -109,30 +109,51 @@ Plug 'vim-denops/denops.vim'
 Plug 'Shougo/ddc-ui-native'
 Plug 'Shougo/ddc-source-around'
 Plug 'shun/ddc-source-vim-lsp'
+Plug 'matsui54/ddc-buffer'
+Plug 'uga-rosa/ddc-source-vsnip'
 Plug 'Shougo/ddc-matcher_head'
 Plug 'Shougo/ddc-sorter_rank'
 
+" Snippet
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'rafamadriz/friendly-snippets'
+
 call plug#end()
 
-" ddc.vim
+" ddc.vim config
 call ddc#custom#patch_global('ui', 'native')
-call ddc#custom#patch_global('sources', ['vim-lsp', 'around'])
+call ddc#custom#patch_global('sources', ['vim-lsp', 'vsnip', 'around', 'buffer'])
 call ddc#custom#patch_global('sourceOptions', #{
       \   _: #{
       \     matchers: ['matcher_head'],
-      \     sorters: ['sorter_rank']
+      \     sorters: ['sorter_rank'],
       \   },
       \   vim-lsp: #{
       \     matchers: ['matcher_head'],
       \     mark: 'lsp',
       \     forceCompletionPattern: '\.\w*|:\w*|->\w*',
+      \     maxItems: 10,
+      \   },
+      \   vsnip: #{
+      \     mark: 'snippet',
       \     maxItems: 10
       \   },
       \   around: #{
       \     mark: 'around',
       \     maxItems: 5,
       \   },
+      \   buffer: #{
+      \     mark: 'buffer',
+      \     maxItems: 5,
+      \   },
       \ })
+
+" Markdown FileType completion sources
+call ddc#custom#patch_filetype('markdown', { 'sources': ['around', 'buffer'] })
+
+inoremap <expr> <C-y> pumvisible() ? (vsnip#expandable() ? "\<Plug>(vsnip-expand)" : "\<C-y>") : "\<C-y>"
 inoremap <expr> <C-Space> ddc#map#manual_complete()
+
 " Use ddc
 call ddc#enable()
