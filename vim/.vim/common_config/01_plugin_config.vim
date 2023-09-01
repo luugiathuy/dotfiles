@@ -66,11 +66,15 @@ Plug 'easymotion/vim-easymotion'
 
 " Running tests
 Plug 'vim-test/vim-test'
+Plug 'tpope/vim-dispatch'
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>v :TestVisit<CR>
+let test#strategy = 'dispatch'
+let test#go#ginkgo#options = '--noColor'
+let g:dispatch_no_maps = 1
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -98,10 +102,20 @@ map <Leader>oi :Rintegration<Space>
 " Elixir
 Plug 'elixir-editors/vim-elixir'
 
+" JavaScript/Typescript
+Plug 'pangloss/vim-javascript'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+
 " Language Server Protocol support
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
+let g:lsp_document_code_action_signs_delay = 200
 let g:lsp_settings_filetype_ruby = 'solargraph'
+
+" Linter
+Plug 'dense-analysis/ale'
+Plug 'rhysd/vim-lsp-ale'
 
 " Autocomplete
 Plug 'Shougo/ddc.vim'
@@ -157,3 +171,15 @@ inoremap <expr> <C-Space> ddc#map#manual_complete()
 
 " Use ddc
 call ddc#enable()
+
+" ale config
+let g:airline#extensions#ale#enabled = 1
+let g:ale_disable_lsp = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   'javascript': ['prettier', 'eslint'],
+\   'typescript': ['prettier', 'eslint'],
+\   'typescriptreact': ['prettier', 'eslint'],
+\   'css': ['prettier'],
+\}
