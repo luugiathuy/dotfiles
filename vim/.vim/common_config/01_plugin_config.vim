@@ -130,6 +130,16 @@ if has('nvim')
 
   " Linter
   Plug 'mfussenegger/nvim-lint'
+
+  " UI
+  Plug 'folke/trouble.nvim'
+  Plug 'nvim-tree/nvim-web-devicons'
+  nnoremap <leader>xx <cmd>TroubleToggle<cr>
+  nnoremap <leader>xw <cmd>TroubleToggle workspace_diagnostics<cr>
+  nnoremap <leader>xd <cmd>TroubleToggle document_diagnostics<cr>
+  nnoremap <leader>xq <cmd>TroubleToggle quickfix<cr>
+  nnoremap <leader>xl <cmd>TroubleToggle loclist<cr>
+  nnoremap gR <cmd>TroubleToggle lsp_references<cr>
 endif
 
 call plug#end()
