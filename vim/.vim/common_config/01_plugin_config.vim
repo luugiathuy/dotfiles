@@ -78,6 +78,24 @@ let test#strategy = 'dispatch'
 let test#go#ginkgo#options = '--noColor'
 let g:dispatch_no_maps = 1
 
+" Undo tree
+Plug 'mbbill/undotree'
+nnoremap <Leader>z :UndotreeToggle<CR>
+
+" Formatter
+Plug 'sbdchd/neoformat'
+nnoremap <silent> <leader>F :Neoformat<CR>
+let g:neoformat_enabled_typescript = ['prettierd']
+let g:neoformat_enabled_typescriptreact = ['prettierd']
+let g:neoformat_enabled_javascript = ['prettierd']
+let g:neoformat_enabled_javascriptreact = ['prettierd']
+" Enable trimmming of trailing whitespace
+let g:neoformat_basic_format_trim = 1
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 au BufNewFile,BufRead *.go set filetype=go
