@@ -9,7 +9,6 @@ local cmp = require'cmp'
 
 cmp.setup({
   snippet = {
-    -- REQUIRED - you must specify a snippet engine
     expand = function(args)
       vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
     end,
@@ -116,4 +115,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+-- nvim-lint config.
+lint = require('lint')
+lint.linters_by_ft = {
+  typescriptreact = {'eslint_d',},
+  typescript = {'eslint_d',},
+  javascript = {'eslint_d',},
+  javascriptreact = {'eslint_d',}
+}
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  callback = function()
+    lint.try_lint()
+  end,
+})
 EOF
