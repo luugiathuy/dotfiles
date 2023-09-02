@@ -13,6 +13,8 @@ Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 let NERDTreeHijackNetrw = 0
 nmap <leader>g :NERDTreeToggle<CR>
 nmap <leader>G :NERDTreeFind<CR>
+" icon
+Plug 'ryanoasis/vim-devicons'
 
 " fzf to search files and texts in file
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -27,6 +29,22 @@ nnoremap <silent> <Leader>' :Marks<CR>
 nnoremap <silent> <Leader>hh :History<CR>
 nnoremap <silent> <Leader>h: :History:<CR>
 nnoremap <silent> <Leader>h/ :History/<CR>
+" Customize fzf colors to match your color scheme
+" let g:fzf_colors = {
+"       \ 'fg':      ['fg', 'Normal'],
+"       \ 'bg':      ['bg', 'Normal'],
+"       \ 'hl':      ['fg', 'Comment'],
+"       \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+"       \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+"       \ 'hl+':     ['fg', 'Statement'],
+"       \ 'info':    ['fg', 'PreProc'],
+"       \ 'border':  ['fg', 'Ignore'],
+"       \ 'prompt':  ['fg', 'Conditional'],
+"       \ 'pointer': ['fg', 'Exception'],
+"       \ 'marker':  ['fg', 'Keyword'],
+"       \ 'spinner': ['fg', 'Label'],
+"       \ 'header':  ['fg', 'Comment']
+"       \ }
 
 " Lean status/tabline
 Plug 'vim-airline/vim-airline'
@@ -107,79 +125,23 @@ Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
-" Language Server Protocol support
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-let g:lsp_document_code_action_signs_delay = 200
-let g:lsp_settings_filetype_ruby = 'solargraph'
+if has('nvim')
+  " Language Server Protocol support
+  Plug 'williamboman/mason.nvim'
+  Plug 'williamboman/mason-lspconfig.nvim'
+  Plug 'neovim/nvim-lspconfig'
 
-" Linter
-Plug 'dense-analysis/ale'
-Plug 'rhysd/vim-lsp-ale'
+  " Autocomplete
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-cmdline'
+  Plug 'hrsh7th/nvim-cmp'
 
-" Autocomplete
-Plug 'Shougo/ddc.vim'
-Plug 'vim-denops/denops.vim'
-Plug 'Shougo/ddc-ui-native'
-Plug 'Shougo/ddc-source-around'
-Plug 'shun/ddc-source-vim-lsp'
-Plug 'matsui54/ddc-buffer'
-Plug 'uga-rosa/ddc-source-vsnip'
-Plug 'Shougo/ddc-matcher_head'
-Plug 'Shougo/ddc-sorter_rank'
-
-" Snippet
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/vim-vsnip-integ'
-Plug 'rafamadriz/friendly-snippets'
+  " Snippet
+  Plug 'hrsh7th/vim-vsnip'
+  Plug 'hrsh7th/cmp-vsnip'
+  Plug 'rafamadriz/friendly-snippets'
+endif
 
 call plug#end()
-
-" ddc.vim config
-call ddc#custom#patch_global('ui', 'native')
-call ddc#custom#patch_global('sources', ['vim-lsp', 'vsnip', 'around', 'buffer'])
-call ddc#custom#patch_global('sourceOptions', #{
-      \   _: #{
-      \     matchers: ['matcher_head'],
-      \     sorters: ['sorter_rank'],
-      \   },
-      \   vim-lsp: #{
-      \     matchers: ['matcher_head'],
-      \     mark: 'lsp',
-      \     forceCompletionPattern: '\.\w*|:\w*|->\w*',
-      \     maxItems: 10,
-      \   },
-      \   vsnip: #{
-      \     mark: 'snippet',
-      \     maxItems: 10
-      \   },
-      \   around: #{
-      \     mark: 'around',
-      \     maxItems: 5,
-      \   },
-      \   buffer: #{
-      \     mark: 'buffer',
-      \     maxItems: 5,
-      \   },
-      \ })
-
-" Markdown FileType completion sources
-call ddc#custom#patch_filetype('markdown', { 'sources': ['around', 'buffer'] })
-
-inoremap <expr> <C-y> pumvisible() ? (vsnip#expandable() ? "\<Plug>(vsnip-expand)" : "\<C-y>") : "\<C-y>"
-inoremap <expr> <C-Space> ddc#map#manual_complete()
-
-" Use ddc
-call ddc#enable()
-
-" ale config
-let g:airline#extensions#ale#enabled = 1
-let g:ale_disable_lsp = 1
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-\   'javascript': ['prettier', 'eslint'],
-\   'typescript': ['prettier', 'eslint'],
-\   'typescriptreact': ['prettier', 'eslint'],
-\   'css': ['prettier'],
-\}
