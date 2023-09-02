@@ -89,6 +89,7 @@ let g:neoformat_enabled_typescript = ['prettierd']
 let g:neoformat_enabled_typescriptreact = ['prettierd']
 let g:neoformat_enabled_javascript = ['prettierd']
 let g:neoformat_enabled_javascriptreact = ['prettierd']
+let g:neoformat_enabled_ruby = ['rubocop']
 " Enable trimmming of trailing whitespace
 let g:neoformat_basic_format_trim = 1
 augroup fmt

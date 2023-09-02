@@ -71,9 +71,17 @@ lspconfig.tailwindcss.setup{
   capabilities = capabilities
 }
 lspconfig.solargraph.setup{
+  settings = {
+    solargraph = {
+      commandPath = '/~/.rbenv/shims/solargraph'
+    }
+  },
   capabilities = capabilities
 }
 lspconfig.gopls.setup{
+  capabilities = capabilities
+}
+lspconfig.elixirls.setup{
   capabilities = capabilities
 }
 
