@@ -4,6 +4,7 @@
     let base16colorspace=256
     colorscheme base16-$BASE16_THEME
     let g:airline_theme='base16'
+    let $BAT_THEME='base16'
   endif
   set background=dark
 
